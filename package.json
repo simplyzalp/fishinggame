@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "csshake": "^1.5.3",
-    "git": "^0.1.5"
+    "csshake": "^1.5.3"
   }
 }
