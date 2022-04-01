@@ -1,0 +1,20 @@
+:root {
+    --game-div-height: 80%;
+    --random-var: calc()
+}
+
+body {
+    background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-size: cover;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 70%;
+    min-width: 800px;
+    height: var(--game-div-height);
+    min-height: 600px;
+    margin: calc(calc(100% - var(--game-div-height))/2) auto;
+}
+
+/* Shaking effects from CSShake, used under the MIT license: https://github.com/elrumordelaluz/csshake/blob/master/LICENSE */
