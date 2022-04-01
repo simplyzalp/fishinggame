@@ -1,0 +1,170 @@
+/* Shaking effects are from / based on CSShake, used under the MIT license: https://github.com/elrumordelaluz/csshake/blob/master/LICENSE */
+/* Doc from CSShake website:
+
+.my-custom-shake {
+  @include do-shake(
+        $name: 'my-custom-shake', /* {String} is the name for the keyframes animation 
+        $h: 5px, /*  {Number} is the max number for random to assign in x axis 
+        $v: 5px, /* {Number} is the max number for random to assign in y axis 
+        $r: 3deg, /* {Number} is the max number for random rotation 
+        $dur: 100ms, /* {Number} is the animation-duration time value 
+        $precision: .02, /* {Number} is the precision of the keyframes animation. For example .02 generates keyframes each 2% and .1 each 10%. The calculation is $step: 100 * $precision; 
+        $opacity: false, 
+        $q: infinite, /* {String} is the animation-iteration-count value 
+        $t: ease-in-out, /* {String} animation-timing-function value 
+        $delay: null, /* {Number} animation-delay time value 
+        $chunk: 100%); /* {Number} is the part of the keyframes where apply the animation 
+} */
+.shake-low {
+		display: inherit;
+		transform-origin: center center;
+}
+
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+		-webkit-animation-play-state: paused;
+		        animation-play-state: paused;
+}
+
+.shake-low:hover, .shake-trigger:hover .shake-low, .shake-freeze:hover,
+.shake-trigger:hover .shake-freeze {
+		-webkit-animation-play-state: running;
+		        animation-play-state: running;
+}
+
+@-webkit-keyframes shake-low {
+		5% {
+				transform: translate(-0.5px, -1.5px) rotate(-1.5deg);
+		}
+		10% {
+				transform: translate(2.5px, -0.5px) rotate(0.5deg);
+		}
+		15% {
+				transform: translate(0.5px, 2.5px) rotate(2.5deg);
+		}
+		20% {
+				transform: translate(1.5px, -0.5px) rotate(-1.5deg);
+		}
+		25% {
+				transform: translate(-0.5px, 0.5px) rotate(0.5deg);
+		}
+		30% {
+				transform: translate(0.5px, 1.5px) rotate(1.5deg);
+		}
+		35% {
+				transform: translate(-1.5px, -0.5px) rotate(2.5deg);
+		}
+		40% {
+				transform: translate(0.5px, 1.5px) rotate(-0.5deg);
+		}
+		45% {
+				transform: translate(-1.5px, 2.5px) rotate(0.5deg);
+		}
+		50% {
+				transform: translate(0.5px, 1.5px) rotate(-1.5deg);
+		}
+		55% {
+				transform: translate(-0.5px, 2.5px) rotate(-0.5deg);
+		}
+		60% {
+				transform: translate(1.5px, 0.5px) rotate(0.5deg);
+		}
+		65% {
+				transform: translate(0.5px, -1.5px) rotate(2.5deg);
+		}
+		70% {
+				transform: translate(0.5px, 0.5px) rotate(-0.5deg);
+		}
+		75% {
+				transform: translate(0.5px, 1.5px) rotate(2.5deg);
+		}
+		80% {
+				transform: translate(2.5px, -1.5px) rotate(-1.5deg);
+		}
+		85% {
+				transform: translate(2.5px, 1.5px) rotate(2.5deg);
+		}
+		90% {
+				transform: translate(0.5px, 2.5px) rotate(0.5deg);
+		}
+		95% {
+				transform: translate(2.5px, -0.5px) rotate(-1.5deg);
+		}
+		0%, 100% {
+				transform: translate(0, 0) rotate(0);
+		}
+}
+
+@keyframes shake-low {
+		5% {
+				transform: translate(-0.5px, -1.5px) rotate(-1.5deg);
+		}
+		10% {
+				transform: translate(2.5px, -0.5px) rotate(0.5deg);
+		}
+		15% {
+				transform: translate(0.5px, 2.5px) rotate(2.5deg);
+		}
+		20% {
+				transform: translate(1.5px, -0.5px) rotate(-1.5deg);
+		}
+		25% {
+				transform: translate(-0.5px, 0.5px) rotate(0.5deg);
+		}
+		30% {
+				transform: translate(0.5px, 1.5px) rotate(1.5deg);
+		}
+		35% {
+				transform: translate(-1.5px, -0.5px) rotate(2.5deg);
+		}
+		40% {
+				transform: translate(0.5px, 1.5px) rotate(-0.5deg);
+		}
+		45% {
+				transform: translate(-1.5px, 2.5px) rotate(0.5deg);
+		}
+		50% {
+				transform: translate(0.5px, 1.5px) rotate(-1.5deg);
+		}
+		55% {
+				transform: translate(-0.5px, 2.5px) rotate(-0.5deg);
+		}
+		60% {
+				transform: translate(1.5px, 0.5px) rotate(0.5deg);
+		}
+		65% {
+				transform: translate(0.5px, -1.5px) rotate(2.5deg);
+		}
+		70% {
+				transform: translate(0.5px, 0.5px) rotate(-0.5deg);
+		}
+		75% {
+				transform: translate(0.5px, 1.5px) rotate(2.5deg);
+		}
+		80% {
+				transform: translate(2.5px, -1.5px) rotate(-1.5deg);
+		}
+		85% {
+				transform: translate(2.5px, 1.5px) rotate(2.5deg);
+		}
+		90% {
+				transform: translate(0.5px, 2.5px) rotate(0.5deg);
+		}
+		95% {
+				transform: translate(2.5px, -0.5px) rotate(-1.5deg);
+		}
+		0%, 100% {
+				transform: translate(0, 0) rotate(0);
+		}
+}
+.shake-low:hover, .shake-trigger:hover .shake-low, .shake-low.shake-freeze, .shake-low.shake-constant {
+		-webkit-animation-name: shake-low;
+		        animation-name: shake-low;
+		-webkit-animation-duration: 5000ms;
+		        animation-duration: 5000ms;
+		-webkit-animation-timing-function: ease-in-out;
+		        animation-timing-function: ease-in-out;
+		-webkit-animation-iteration-count: infinite;
+		        animation-iteration-count: infinite;
+}
