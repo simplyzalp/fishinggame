@@ -17,4 +17,20 @@ body {
     margin: calc(calc(100% - var(--game-div-height))/2) auto;
 }
 
-/* Shaking effects from CSShake, used under the MIT license: https://github.com/elrumordelaluz/csshake/blob/master/LICENSE */
+#fishing-bar-bg {
+    background-color: rgb(64, 64, 192);
+    width: 400px;
+    height: 50px;
+    margin: auto;
+}
+
+#fishing-bobber {
+    background: rgb(204, 68, 68);
+    background: linear-gradient(180deg, rgba(204, 68, 68, 1) 49%, rgba(255, 255, 255, 1) 50%);
+    position: relative;
+    top: -10px;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+}
+
